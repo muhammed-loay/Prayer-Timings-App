@@ -1,2 +1,8 @@
-# Prayer-Timings-App
-A modern React-based application for displaying accurate prayer timings for cities in Egypt. The app uses the Aladhan API for real-time prayer schedules and features a clean, user-friendly interface with options to view countdowns to the next prayer. Includes city selection and a link to the Quran for added functionality.
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

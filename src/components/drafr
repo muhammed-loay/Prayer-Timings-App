@@ -1,0 +1,25 @@
+//   const [RemainingTime, SetRemaminingTime] = useState(0);
+  //   const [nextprayer, setnextprayer] = useState("");
+  //   useEffect(() => {
+  //     if (Object.keys(timings).length > 0) calculateRemainingTime();
+  //     {
+  //       const timer = setInterval((calculateRemainingTime, 1000));
+  //       return () => {
+  //         clearInterval(timer);
+  //       };
+  //     }
+  //   }, [timings]);
+  //   const calculateRemainingTime = () => {
+  //     const now = dayjs();
+  //     const RemainingTime = Object.entries(timings).map(([name, time]) => ({
+  //       name,
+  //       time: dayjs(`${dayjs().format("YYYY-MM-DD")} ${time}`),
+  //     }));
+  //     console.log("timings", timings);
+  //     return (
+  //       <div>
+  //         <h2>متبقي حتى صلاة العصر</h2>
+  //         <h4>{RemainingTime}</h4>
+  //       </div>
+  //     );
+  //   };
