@@ -49,7 +49,7 @@ export default function MainContent() {
 
   const getTiming = async () => {
     const data = await axios.get(
-      `https://api.aladhan.com/v1/timingsByCity?city=damietta&country=${cityname.apiname}`
+      `https://api.aladhan.com/v1/timingsByCity?city=${cityname.apiname}&country=Egypt`
     );
     setTimings(data.data.data.timings);
   };
