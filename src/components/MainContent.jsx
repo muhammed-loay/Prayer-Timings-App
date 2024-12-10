@@ -106,7 +106,13 @@ export default function MainContent() {
         spacing={2}
         style={{ marginTop: "20px" }}
       >
-        <Prayer name="الفجر" time={timings.Fajr} image="./src/assets/5.jpg" />
+        <Prayer
+          style={{ marginLeft: "16px" }}
+          name="الفجر"
+          time={timings.Fajr}
+          image="./src/assets/5.jpg"
+        />
+
         <Prayer name="الظهر" time={timings.Dhuhr} image="./src/assets/1.jpg" />
         <Prayer name="العصر" time={timings.Asr} image="./src/assets/2.jpg" />
         <Prayer
