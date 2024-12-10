@@ -71,9 +71,10 @@ export default function MainContent() {
     <div>
       <Grid
         container
-        style={{ textAlign: "center", backgroundColor: "", width: "100vh" }}
+        spacing={2}
+        style={{ textAlign: "center", width: "100%" }}
       >
-        <Grid xs={5}>
+        <Grid item xs={12} md={5}>
           <h4>
             {timings_arr.length === 0 ? (
               <h6>جاري تحميل مواقيت الصلاة...</h6>
@@ -86,13 +87,12 @@ export default function MainContent() {
             )}
           </h4>
         </Grid>
-        <Grid xs={2}>
+        <Grid item xs={12} md={2}>
           <h1>
             <Timer time={time} setTime={setTime} timings={timings} />
           </h1>
         </Grid>
-
-        <Grid xs={5}>
+        <Grid item xs={12} md={5}>
           <h4>
             <Date />
           </h4>
@@ -101,9 +101,10 @@ export default function MainContent() {
       </Grid>
       <Divider />
       <Stack
-        direction={"row"}
-        justifyContent={"space-around"}
-        style={{ marginTop: "50px" }}
+        direction={{ xs: "column", md: "row" }}
+        justifyContent="space-around"
+        spacing={2}
+        style={{ marginTop: "20px" }}
       >
         <Prayer name="الفجر" time={timings.Fajr} image="./src/assets/5.jpg" />
         <Prayer name="الظهر" time={timings.Dhuhr} image="./src/assets/1.jpg" />
@@ -118,15 +119,14 @@ export default function MainContent() {
       <Stack
         justifyContent="center"
         alignItems="center"
-        style={{ marginTop: "30px", position: "relative" }}
-        direction="row"
+        spacing={2}
+        style={{ marginTop: "30px" }}
       >
-        {/* City Selection */}
-        <FormControl style={{ width: "20%", zIndex: 1 }}>
-          <InputLabel id="demo-simple-select-label">المدينة</InputLabel>
+        <FormControl style={{ width: "90%" }}>
+          <InputLabel id="city-select-label">المدينة</InputLabel>
           <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
+            labelId="city-select-label"
+            id="city-select"
             label="المدينه"
             onChange={handleCityChange}
           >
@@ -137,17 +137,14 @@ export default function MainContent() {
             ))}
           </Select>
         </FormControl>
-
-        {/* Button for القرآن الكريم */}
         <a
           href="https://alfaroksoft.com/quran/index.php"
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            marginLeft: "20px",
             textAlign: "center",
             backgroundColor: "#f0f0f0",
-            padding: "10px 15px",
+            padding: "10px 20px",
             borderRadius: "5px",
             textDecoration: "none",
             color: "#000",
@@ -157,6 +154,16 @@ export default function MainContent() {
           القرآن الكريم
         </a>
       </Stack>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          h4 {
+            font-size: 1rem;
+          }
+          h1 {
+            font-size: 1.5rem;
+          }
+        }
+      `}</style>
     </div>
   );
 }
